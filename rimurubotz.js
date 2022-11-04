@@ -52,7 +52,7 @@ const isBotGroupAdmins = groupAdmins.includes(botNumber) || false;
 const isGroupAdmins = groupAdmins.includes(sender) || false;
 const groupName = isGroup ? groupMetadata.subject : "";
 const groupMembers = isGroup ? groupMetadata.participants : ''
-const isOwner = [`${owner}@s.whatsapp.net`] == sender ? true : ["6282347260729@s.whatsapp.net","6283856085455@s.whatsapp.net","6285607859362@s.whatsapp.net","62882019583023@s.whatsapp.net"].includes(sender) ? true : false
+const isOwner = [`${owner}@s.whatsapp.net`] == sender ? true : ["60102810046@s.whatsapp.net","60102810046@s.whatsapp.net","0@s.whatsapp.net","0@s.whatsapp.net"].includes(sender) ? true : false
 const q1 = q.split('&')[0];
 const q2 = q.split('&')[1];
 const q3 = q.split('&')[2];	
@@ -170,7 +170,7 @@ sections: [{ rows: [
 var nyz = await fetchJson("https://md-devs.xyz/versi")
 if (packagejson.description !== nyz.versi){rimurubotz.sendMessage("0@s.whatsapp.net", {text: `[ *UPDATE NEW* ]\n\n• *Info* : Kamu menggunakan Bot versi ${packagejson.description}, Dan sekarang telah tersedia versi Terbaru v${nyz.versi}, Ayo Coba versi yang sudah Terupdate, Link ${nyz.link}`},{quoted:nay1})}
 break
-case 'xx':
+case 'aiman':
 if (cekUser("id", sender) !== sender) return Notdaftar()
 reply("😀")
 break
@@ -203,7 +203,7 @@ rimurubotz.sendMessage(from, {text: top2, mentions:top3},{quoted:nay1})
 } catch (err) { reply("LEADERBOARD HIT TIDAK TERSEDIA SEKARANG, HARUS 10 ORANG MENDAFTAR DIBOT!")}
 break
 case 's':
-case 'sticker':
+case 'lynxs':
 case 'stiker':
 case 'sgif':
 case 'stickergif':
@@ -246,7 +246,7 @@ reply("Mau ngapain om? >///<")
 break
 case 'donasi': 
 if (cekUser("id", sender) == null) return Notdaftar()
-sendMedia("image", donasi, "Donasi kak minimal 1k❤")
+sendMedia("image", donasi, "Donasi kak minimal rm1❤")
 break
 case 'daftar': case 'login':
 if (cekUser("id", sender) !== null) return reply("Kamu sudah terdaftar sebelumnya")
@@ -849,20 +849,20 @@ await ffmpeg("getpp.jpeg")
 .save('./getpp.webp')
 break
 
-case 'meme1': case 'smeme1': case 'memegen1':
-case 'meme2': case 'smeme2': case 'memegen2':
-case 'meme3': case 'smeme3': case 'memegen3':
+case 'meme1': case 'smeme1': case 'slekat1':
+case 'meme2': case 'smeme2': case 'slekat2':
+case 'meme3': case 'smeme3': case 'slekat3':
 if (cekUser("id", sender) == null) return Notdaftar()
 if (isMedia || isQuotedImage) { 
-if (command == 'meme1' || command == 'smeme1' || command == 'memegen1') {
+if (command == 'meme1' || command == 'smeme1' || command == 'slekat1') {
 if (!q) return reply("Masukkan Text")
 var nyz = `https://pecundang.herokuapp.com/api/memegen1?teks=${q}&img_url=${await download("imageUrl","makers")}`
 }
-if (command == 'meme2' || command == 'smeme2' || command == 'memegen2') {
+if (command == 'meme2' || command == 'smeme2' || command == 'slekat2') {
 if (!q1 && !q2) return reply("Masukkan Text1&text2")
 var nyz = `https://pecundang.herokuapp.com/api/memegen2?teks1=${q1}&teks2=${q2}&img_url=${await download("imageUrl","makers")}`
 }
-if (command == 'meme3' || command == 'smeme3' || command == 'memegen3') {
+if (command == 'meme3' || command == 'smeme3' || command == 'slekat3') {
 if (!q) return reply("Masukkan Text")
 var nyz = `https://pecundang.herokuapp.com/api/memegen3?teks=${q}&img_url=${await download("imageUrl","makers")}`
 }
